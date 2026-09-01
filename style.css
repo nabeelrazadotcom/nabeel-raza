@@ -545,7 +545,7 @@ img {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--line);
-  background: #f8fafc;
+  background: transparent;
   color: var(--ink);
   padding: 8px 12px;
   border-radius: 999px;
@@ -605,7 +605,7 @@ img {
 }
 
 .project-box {
-  background: #f8fafc;
+  background: transparent;
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 18px;
