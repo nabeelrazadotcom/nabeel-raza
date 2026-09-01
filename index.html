@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nabeel Raza | Resume</title>
+    <title>Nabeel Raza | QA Associate</title>
     <meta
       name="description"
       content="Professional resume of Nabeel Raza, showcasing training at TICER and internship at Farmevo."
@@ -16,11 +16,65 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="is-loading">
+    <div id="skeleton-loader" aria-label="Loading resume" role="status">
+      <div class="skeleton-shell">
+        <div class="skeleton-hero">
+          <div class="skeleton-profile skeleton-shimmer"></div>
+          <div class="skeleton-headline">
+            <div
+              class="skeleton-line skeleton-line--eyebrow skeleton-shimmer"
+            ></div>
+            <div
+              class="skeleton-line skeleton-line--title skeleton-shimmer"
+            ></div>
+            <div
+              class="skeleton-line skeleton-line--wide skeleton-shimmer"
+            ></div>
+            <div
+              class="skeleton-line skeleton-line--medium skeleton-shimmer"
+            ></div>
+            <div class="skeleton-meta">
+              <div class="skeleton-pill skeleton-shimmer"></div>
+              <div class="skeleton-pill skeleton-shimmer"></div>
+              <div class="skeleton-pill skeleton-shimmer"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skeleton-journey">
+          <div class="skeleton-journey-card skeleton-shimmer"></div>
+          <div class="skeleton-journey-card skeleton-shimmer"></div>
+        </div>
+        <div class="skeleton-columns">
+          <div class="skeleton-card skeleton-shimmer">
+            <div
+              class="skeleton-line skeleton-line--section skeleton-shimmer"
+            ></div>
+            <div
+              class="skeleton-line skeleton-line--full skeleton-shimmer"
+            ></div>
+            <div
+              class="skeleton-line skeleton-line--full skeleton-shimmer"
+            ></div>
+            <div
+              class="skeleton-line skeleton-line--medium skeleton-shimmer"
+            ></div>
+          </div>
+          <div class="skeleton-card skeleton-shimmer">
+            <div
+              class="skeleton-line skeleton-line--section skeleton-shimmer"
+            ></div>
+            <div class="skeleton-block skeleton-shimmer"></div>
+            <div class="skeleton-block skeleton-shimmer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="page-shell">
       <header class="hero">
         <div class="hero__identity">
@@ -40,13 +94,51 @@
             </p>
 
             <div class="meta-card">
-              <span><i class="fas fa-location-dot"></i> Lodhran, Pakistan</span>
               <span
+                class="contact-pill copyable-pill"
+                data-copy="nabeelraza.me@gmail.com"
+                data-tooltip="Copy email"
+                aria-label="Copy email address"
+                role="button"
+                tabindex="0"
                 ><i class="fas fa-envelope"></i> nabeelraza.me@gmail.com</span
               >
-              <span><i class="fas fa-phone"></i> +92 326 7675012</span>
-              <span><i class="fab fa-linkedin"></i> @itsraosaab</span>
-              <span><i class="fab fa-github"></i> @nabeelrazadotcom</span>
+              <span
+                class="contact-pill copyable-pill"
+                data-copy="+92 326 7675012"
+                data-tooltip="Copy phone number"
+                aria-label="Copy phone number"
+                role="button"
+                tabindex="0"
+                ><i class="fas fa-phone"></i> +92 326 7675012</span
+              >
+              <a
+                class="contact-pill social-pill"
+                href="https://www.linkedin.com/in/itsraosaab"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-tooltip="Open LinkedIn Profile"
+                aria-label="LinkedIn profile: @itsraosaab"
+                ><i class="fab fa-linkedin"></i> @itsraosaab</a
+              >
+              <a
+                class="contact-pill social-pill"
+                href="https://github.com/nabeelrazadotcom"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-tooltip="Open GitHub Profile"
+                aria-label="GitHub profile: @nabeelrazadotcom"
+                ><i class="fab fa-github"></i> @nabeelrazadotcom</a
+              >
+              <a
+                class="contact-pill social-pill"
+                href="https://twitter.com/itsnabeelraza"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-tooltip="Open Twitter Profile"
+                aria-label="Twitter profile: @itsnabeelraza"
+                ><i class="fab fa-x-twitter"></i> @itsnabeelraza</a
+              >
             </div>
           </div>
         </div>
@@ -106,14 +198,26 @@
               preserveAspectRatio="none"
             >
               <defs>
+                <linearGradient
+                  id="ecg-trail-gradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop offset="0%" stop-color="#ffd7c6" stop-opacity="0.15" />
+                  <stop offset="24%" stop-color="#ff8a65" stop-opacity="0.9" />
+                  <stop offset="55%" stop-color="#ff4d4d" stop-opacity="1" />
+                  <stop offset="100%" stop-color="#ffb26c" stop-opacity="0.2" />
+                </linearGradient>
                 <filter
-                  id="ecg-glow"
+                  id="ecg-glow-red"
                   x="-50%"
                   y="-50%"
                   width="200%"
                   height="200%"
                 >
-                  <feGaussianBlur stdDeviation="1.8" result="blur" />
+                  <feGaussianBlur stdDeviation="2.4" result="blur" />
                   <feMerge>
                     <feMergeNode in="blur" />
                     <feMergeNode in="SourceGraphic" />
@@ -132,15 +236,15 @@
               />
 
               <circle
-                class="pulse-dot pulse-dot--left"
-                r="2.1"
-                fill="#fbbf63"
-                filter="url(#ecg-glow)"
+                r="6"
+                fill="#ff5a36"
+                opacity="0.2"
+                filter="url(#ecg-glow-red)"
               >
                 <animateMotion
-                  dur="3s"
+                  dur="2s"
                   repeatCount="indefinite"
-                  keyPoints="0;0.5"
+                  keyPoints="0;1"
                   keyTimes="0;1"
                   calcMode="linear"
                 >
@@ -149,15 +253,14 @@
               </circle>
 
               <circle
-                class="pulse-dot pulse-dot--right"
-                r="2.1"
-                fill="#fbbf63"
-                filter="url(#ecg-glow)"
+                r="3.6"
+                fill="url(#ecg-trail-gradient)"
+                filter="url(#ecg-glow-red)"
               >
                 <animateMotion
-                  dur="3s"
+                  dur="2s"
                   repeatCount="indefinite"
-                  keyPoints="1;0.5"
+                  keyPoints="0;1"
                   keyTimes="0;1"
                   calcMode="linear"
                 >
@@ -172,14 +275,26 @@
               preserveAspectRatio="none"
             >
               <defs>
+                <linearGradient
+                  id="ecg-mobile-trail-gradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#ffd7c6" stop-opacity="0.12" />
+                  <stop offset="25%" stop-color="#ff8a65" stop-opacity="0.9" />
+                  <stop offset="60%" stop-color="#ff4d4d" stop-opacity="1" />
+                  <stop offset="100%" stop-color="#ffb26c" stop-opacity="0.2" />
+                </linearGradient>
                 <filter
-                  id="ecg-mobile-glow"
+                  id="ecg-mobile-glow-red"
                   x="-50%"
                   y="-50%"
                   width="200%"
                   height="200%"
                 >
-                  <feGaussianBlur stdDeviation="1.6" result="blur" />
+                  <feGaussianBlur stdDeviation="2" result="blur" />
                   <feMerge>
                     <feMergeNode in="blur" />
                     <feMergeNode in="SourceGraphic" />
@@ -198,15 +313,15 @@
               />
 
               <circle
-                class="pulse-dot pulse-dot--left"
-                r="1.9"
-                fill="#fbbf63"
-                filter="url(#ecg-mobile-glow)"
+                r="4.8"
+                fill="#ff5a36"
+                opacity="0.18"
+                filter="url(#ecg-mobile-glow-red)"
               >
                 <animateMotion
-                  dur="3s"
+                  dur="2s"
                   repeatCount="indefinite"
-                  keyPoints="0;0.5"
+                  keyPoints="0;1"
                   keyTimes="0;1"
                   calcMode="linear"
                 >
@@ -215,15 +330,14 @@
               </circle>
 
               <circle
-                class="pulse-dot pulse-dot--right"
-                r="1.9"
-                fill="#fbbf63"
-                filter="url(#ecg-mobile-glow)"
+                r="2.8"
+                fill="url(#ecg-mobile-trail-gradient)"
+                filter="url(#ecg-mobile-glow-red)"
               >
                 <animateMotion
-                  dur="3s"
+                  dur="2s"
                   repeatCount="indefinite"
-                  keyPoints="1;0.5"
+                  keyPoints="0;1"
                   keyTimes="0;1"
                   calcMode="linear"
                 >
