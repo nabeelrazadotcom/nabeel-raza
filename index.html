@@ -18,6 +18,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="is-loading">
@@ -75,6 +79,26 @@
       </div>
     </div>
 
+    <button
+      id="theme-toggle"
+      class="theme-toggle"
+      type="button"
+      aria-label="Switch to light mode"
+      aria-pressed="false"
+    >
+      <span
+        class="material-symbols-rounded theme-icon theme-icon--moon"
+        aria-hidden="true"
+        >dark_mode</span
+      >
+      <span
+        class="material-symbols-rounded theme-icon theme-icon--sun"
+        aria-hidden="true"
+        >light_mode</span
+      >
+      <span class="sr-only">Theme</span>
+    </button>
+
     <div class="page-shell">
       <header class="hero">
         <div class="hero__identity">
@@ -83,11 +107,13 @@
             <div class="photo-wrap">
               <img src="pfp.png" alt="Nabeel Raza" />
             </div>
+            <p id="profile-title" class="profile-title" aria-live="polite">
+              FULL-STACK DEVELOPER
+            </p>
           </div>
 
           <div class="headline">
-            <span class="eyebrow">UI/UX Engineer • Full-Stack Developer</span>
-            <h1>Nabeel Raza</h1>
+            <h1 class="shimmer-text">Nabeel Raza</h1>
             <p>
               Building thoughtful digital experiences with a balance of clean
               UI, strong logic, and practical product thinking.
@@ -147,46 +173,57 @@
       <section class="journey-card">
         <div class="journey-timeline">
           <article class="journey-step">
-            <div class="brand-logo brand-logo--ticer">
-              <a
-                href="https://ticer.co/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="TICER website"
-              >
-                <img src="ticer-logo.png" alt="TICER" />
-              </a>
-            </div>
-
-            <div class="journey-copy">
-              <h3>Web Development Trainee</h3>
-              <p>TICER</p>
-              <span>12 Feb – 12 May 2026</span>
-              <div class="brand-links" aria-label="TICER links">
+            <div class="card-ribbon">
+              <div class="brand-logo brand-logo--ticer">
                 <a
-                  href="https://ticer.pk/"
+                  href="https://ticer.co/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="TICER website"
                 >
-                  <i class="fas fa-globe"></i>
+                  <img src="ticer-logo.png" alt="TICER" />
                 </a>
-                <a
-                  href="https://www.linkedin.com/company/ticer"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="TICER LinkedIn"
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="journey-copy">
+                <h3>Web Development Trainee</h3>
+                <p>TICER</p>
+                <span>12 Feb – 12 May 2026</span>
+                <span id="ticer-duration" class="experience-timer" role="status"
+                  >0 months, 0 days, 0 hours, 0 minutes, 0 seconds</span
                 >
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a
-                  href="https://www.instagram.com/ticer.pk"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="TICER Instagram"
-                >
-                  <i class="fab fa-instagram"></i>
-                </a>
+                <span class="journey-status journey-status--complete">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                  Accomplished
+                </span>
+                <div class="brand-links" aria-label="TICER links">
+                  <a
+                    href="https://ticer.pk/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="TICER website"
+                  >
+                    <i class="fas fa-globe"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/ticer"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="TICER LinkedIn"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/ticer.pk"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="TICER Instagram"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -348,46 +385,57 @@
           </div>
 
           <article class="journey-step">
-            <div class="brand-logo brand-logo--farmevo">
-              <a
-                href="https://farmevo.ai/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Farmevo website"
-              >
-                <img src="farmevo-logo.png" alt="Farmevo" />
-              </a>
-            </div>
-
-            <div class="journey-copy">
-              <h3>QA Associate Intern</h3>
-              <p>Farmevo</p>
-              <span>1 Jul 2026 – Present</span>
-              <div class="brand-links" aria-label="Farmevo links">
+            <div class="card-ribbon">
+              <div class="brand-logo brand-logo--farmevo">
                 <a
                   href="https://farmevo.ai/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Farmevo website"
                 >
-                  <i class="fas fa-globe"></i>
+                  <img src="farmevo-logo.png" alt="Farmevo" />
                 </a>
-                <a
-                  href="https://www.linkedin.com/company/farmevo-ag"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Farmevo LinkedIn"
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="journey-copy">
+                <h3>QA Associate Intern</h3>
+                <p>Farmevo</p>
+                <span>1 Jul 2026 – Present</span>
+                <span
+                  id="experience-timer"
+                  class="experience-timer"
+                  role="timer"
+                  >0 years, 0 months, 0 days, 0 hours, 0 minutes, 0
+                  seconds</span
                 >
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a
-                  href="https://www.youtube.com/@farmevoai"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Farmevo Instagram"
-                >
-                  <i class="fab fa-youtube"></i>
-                </a>
+                <div class="brand-links" aria-label="Farmevo links">
+                  <a
+                    href="https://farmevo.ai/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Farmevo website"
+                  >
+                    <i class="fas fa-globe"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/farmevo-ag"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Farmevo LinkedIn"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@farmevoai"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Farmevo Instagram"
+                  >
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </article>
