@@ -72,7 +72,7 @@
               <span>12 Feb – 12 May 2026</span>
               <div class="brand-links" aria-label="TICER links">
                 <a
-                  href="https://ticer.co/"
+                  href="https://ticer.pk/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="TICER website"
@@ -80,7 +80,7 @@
                   <i class="fas fa-globe"></i>
                 </a>
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/company/ticer"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="TICER LinkedIn"
@@ -88,7 +88,7 @@
                   <i class="fab fa-linkedin-in"></i>
                 </a>
                 <a
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/ticer.pk"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="TICER Instagram"
@@ -100,7 +100,7 @@
           </article>
 
           <div class="journey-connector" aria-hidden="true">
-            <svg viewBox="0 0 140 22" preserveAspectRatio="none">
+            <svg class="ecg-desktop" viewBox="0 0 140 22" preserveAspectRatio="none">
               <defs>
                 <filter
                   id="ecg-glow"
@@ -161,6 +161,68 @@
                 </animateMotion>
               </circle>
             </svg>
+
+            <svg class="ecg-mobile" viewBox="0 0 22 150" preserveAspectRatio="none">
+              <defs>
+                <filter
+                  id="ecg-mobile-glow"
+                  x="-50%"
+                  y="-50%"
+                  width="200%"
+                  height="200%"
+                >
+                  <feGaussianBlur stdDeviation="1.6" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <path
+                id="ecg-line-mobile"
+                d="M11 0 L11 18 L3 28 L19 38 L11 52 L11 82 L11 94 L3 104 L19 118 L11 132 L11 150"
+                fill="none"
+                stroke="rgba(148,163,184,0.8)"
+                stroke-width="1.8"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+              />
+
+              <circle
+                class="pulse-dot pulse-dot--left"
+                r="1.9"
+                fill="#fbbf63"
+                filter="url(#ecg-mobile-glow)"
+              >
+                <animateMotion
+                  dur="3s"
+                  repeatCount="indefinite"
+                  keyPoints="0;0.5"
+                  keyTimes="0;1"
+                  calcMode="linear"
+                >
+                  <mpath href="#ecg-line-mobile" />
+                </animateMotion>
+              </circle>
+
+              <circle
+                class="pulse-dot pulse-dot--right"
+                r="1.9"
+                fill="#fbbf63"
+                filter="url(#ecg-mobile-glow)"
+              >
+                <animateMotion
+                  dur="3s"
+                  repeatCount="indefinite"
+                  keyPoints="1;0.5"
+                  keyTimes="0;1"
+                  calcMode="linear"
+                >
+                  <mpath href="#ecg-line-mobile" />
+                </animateMotion>
+              </circle>
+            </svg>
           </div>
 
           <article class="journey-step">
@@ -189,7 +251,7 @@
                   <i class="fas fa-globe"></i>
                 </a>
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/company/farmevo-ag"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Farmevo LinkedIn"
@@ -197,12 +259,12 @@
                   <i class="fab fa-linkedin-in"></i>
                 </a>
                 <a
-                  href="https://www.instagram.com"
+                  href="https://www.youtube.com/@farmevoai"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Farmevo Instagram"
                 >
-                  <i class="fab fa-instagram"></i>
+                  <i class="fab fa-youtube"></i>
                 </a>
               </div>
             </div>

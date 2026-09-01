@@ -303,12 +303,30 @@ img {
   z-index: 1;
   pointer-events: none;
   overflow: visible;
+  transform: none !important;
 }
 
 .journey-connector svg {
   width: 100%;
   height: 22px;
   display: block;
+}
+
+.journey-connector .ecg-mobile {
+  display: none;
+}
+
+@media (min-width: 761px) {
+  .journey-connector {
+    width: 100%;
+    height: 22px;
+    transform: none !important;
+  }
+
+  .journey-connector svg {
+    width: 100%;
+    height: 22px;
+  }
 }
 
 .pulse-dot {
@@ -683,30 +701,37 @@ img {
 
   .journey-timeline {
     grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .journey-timeline::before {
-    left: 24px;
-    right: auto;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    height: auto;
+    justify-items: center;
+    row-gap: 0;
+    column-gap: 0;
+    min-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
   }
 
   .journey-step {
-    margin-left: 24px;
-    align-items: flex-start;
+    width: min(100%, 260px);
+    margin: 0;
+    align-items: center;
   }
 
-  .timeline-dot {
-    left: -29px;
+  .journey-connector {
+    width: 22px;
+    height: 150px;
+    margin: 0 auto;
+    transform: none;
+    transform-origin: center;
   }
 
-  .journey-step:last-of-type .timeline-dot {
-    left: -29px;
-    right: auto;
+  .journey-connector .ecg-desktop {
+    display: none;
+  }
+
+  .journey-connector .ecg-mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -721,6 +746,12 @@ img {
   .journey-card,
   .card {
     border-radius: 20px;
+  }
+
+  .journey-connector {
+    height: 182px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .brand-logo {
